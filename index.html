@@ -1236,11 +1236,14 @@ function checkOtherGame(val) {
 
 // ================== HÀM CHẠY PHÂN TÍCH CHÍNH (TỐI ƯU 10 GIÂY) ==================
 function startAnalysis(){
-    // Reset lượt quét mỗi lần bấm nút
-    usageData = { date: today, count: 0 };
-    localStorage.setItem("system_usage", JSON.stringify(usageData));
-    let rem = MAX_USES - usageData.count;
-    document.getElementById("limit-text").innerText = "LƯỢT QUÉT HÔM NAY: " + (rem < 0 ? 0 : rem) + "/" + MAX_USES;
+    // Kiểm tra giới hạn lượt quét
+    usageData = getLimitData();
+    let remaining = MAX_USES - usageData.count;
+    
+    if (remaining <= 0) {
+        showAlert("Bạn đã sử dụng hết " + MAX_USES + " lượt quét cho hôm nay. Quay lại vào ngày mai!");
+        return;
+    }
 
     let user = document.getElementById("user").value.trim();
     let gameSelect = document.getElementById("game").value;
@@ -1252,6 +1255,12 @@ function startAnalysis(){
 
     if (!user || !game) { showAlert("Lệnh thất bại. Hãy điền đầy đủ ID và chọn máy chủ!"); return; }
     if (user.length < 6) { showAlert("Mã tài khoản quá ngắn. Hệ thống yêu cầu tối thiểu 6 ký tự!"); return; }
+
+    // Tăng lượt sử dụng sau khi kiểm tra đầu vào
+    usageData.count += 1;
+    localStorage.setItem("system_usage", JSON.stringify(usageData));
+    let rem = MAX_USES - usageData.count;
+    document.getElementById("limit-text").innerText = "LƯỢT QUÉT HÔM NAY: " + (rem < 0 ? 0 : rem) + "/" + MAX_USES;
 
     document.getElementById("btn").disabled = true;
 
