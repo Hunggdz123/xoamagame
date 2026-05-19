@@ -974,13 +974,12 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
 
         <h2>XÓA MÃ ẨN GAME </h2>
 
-        <div class="hud-data">
-            <span id="online">USER ACTIVE: 534</span>
-            <span id="ip">IP: 171.249.224.75</span>
+        <div class="hud-data" style="flex-wrap: wrap;">
+            <span id="online" style="width: 50%;">USER ACTIVE: 534</span>
+            <span id="ip" style="width: 50%;">IP: 171.249.224.75</span>
+            <span id="limit-text" style="width: 50%; color: var(--warning);">LƯỢT QUÉT HÔM NAY: 3/3</span>
+            <span id="timer" style="width: 50%; color: var(--danger); display: none;">KẾT NỐI SẼ NGẮT SAU: 30s</span>
         </div>
-
-        <div style="font-size: 17.3px; color: var(--warning); margin-bottom: 15px; letter-spacing: 1px;" id="limit-text">LƯỢT QUÉT HÔM NAY: 3/3</div>
-        <div style="font-size: 17.3px; color: var(--danger); margin-bottom: 15px; display: none; letter-spacing: 1px;" id="timer">KẾT NỐI SẼ NGẮT SAU: 30s</div>
 
         <div class="input-group">
             <div class="input-label">Mã mục tiêu / ID tài khoản:</div>
