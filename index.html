@@ -40,7 +40,7 @@ canvas#matrix {
     background-image: 
         linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 48px 48px;
     transform: perspective(600px) rotateX(60deg) translateY(0);
     animation: gridMove 30s linear infinite;
     z-index: 2;
@@ -54,7 +54,7 @@ canvas#matrix {
 .hud-center-circles {
     position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px; height: 600px;
+    width: 320px; height: 480px;
     border: 1px solid rgba(0, 229, 255, 0.1);
     border-radius: 50%;
     z-index: 3; pointer-events: none;
@@ -91,14 +91,14 @@ canvas#matrix {
     transition: all 1.2s cubic-bezier(0.7, 0, 0.3, 1);
 }
 .cyber-ring {
-    width: 200px; height: 200px;
+    width: 160px; height: 160px;
     border: 2px solid transparent; border-top: 3px solid var(--primary); border-bottom: 3px solid var(--primary);
-    border-radius: 50%; margin-bottom: 57px;
+    border-radius: 50%; margin-bottom: 46px;
     animation: spinClockwise 1.5s cubic-bezier(0.53, 0.21, 0.29, 0.87) infinite;
     filter: drop-shadow(0 0 10px var(--primary-glow));
 }
 .glitch-text {
-    font-size: 20px; letter-spacing: 11.4px; color: var(--primary);
+    font-size: 16px; letter-spacing: 9px; color: var(--primary);
     text-shadow: 0 0 10px var(--primary); font-weight: bold; text-transform: uppercase;
 }
 
@@ -112,11 +112,11 @@ canvas#matrix {
 }
 
 .container {
-    max-width: 635px; width: 95%;
+    max-width: 508px; width: 95%;
     background: rgba(1, 12, 15, 0.85);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 229, 255, 0.3);
-    padding: 50px 36px; text-align: center;
+    padding: 40px 29px; text-align: center;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 229, 255, 0.05);
     position: relative;
     clip-path: polygon(0 40px, 40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
@@ -124,13 +124,13 @@ canvas#matrix {
     transform-style: preserve-3d; /* THÊM CHO 3D: Để các thành phần con nổi lên */
 }
 .container::before {
-    content: 'SYSTEM SECURE'; position: absolute; top: 12px; left: 50px;
-    font-size: 9px; color: rgba(0, 229, 255, 0.4); letter-spacing: 2px;
+    content: 'SYSTEM SECURE'; position: absolute; top: 10px; left: 40px;
+    font-size: 7px; color: rgba(0, 229, 255, 0.4); letter-spacing: 2px;
     transform: translateZ(10px); /* Nổi nhẹ */
 }
 
 .corner-target { 
-    position: absolute; width: 36px; height: 36px; 
+    position: absolute; width: 29px; height: 29px; 
     border: 2px solid var(--primary); opacity: 0.6; 
     transform: translateZ(20px); /* Góc vuông nổi lên hẳn */
 }
@@ -140,31 +140,31 @@ canvas#matrix {
 .br { bottom: 0; right: 0; border-left: none; border-top: none; border-bottom-right-radius: 4px;}
 
 h2 {
-    color: var(--primary); font-size: 31px; letter-spacing: 8.6px;
-    text-shadow: 0 0 15px var(--primary-glow); margin: 21px 0 36px 0;
+    color: var(--primary); font-size: 25px; letter-spacing: 7px;
+    text-shadow: 0 0 15px var(--primary-glow); margin: 17px 0 29px 0;
     text-transform: uppercase; font-weight: 900;
     transform: translateZ(40px); /* Tiêu đề nổi mạnh nhất */
 }
 
 .hud-data {
     display: flex; justify-content: space-between;
-    font-size: 16px; color: var(--primary); opacity: 0.8;
-    margin-bottom: 29px; border-bottom: 1px solid rgba(0, 229, 255, 0.15);
-    padding-bottom: 14px;
+    font-size: 13px; color: var(--primary); opacity: 0.8;
+    margin-bottom: 23px; border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+    padding-bottom: 11px;
     transform: translateZ(20px); /* Nổi lên mặt phẳng 3D */
 }
 
 .input-group { 
-    position: relative; margin-bottom: 15px; text-align: left; 
-    transform: translateZ(25px); /* Khối input nổi lên */
+    position: relative; margin-bottom: 12px; text-align: left; 
+    transform: translateZ(25px);
 }
-.input-label { font-size: 13px; color: rgba(0, 229, 255, 0.6); letter-spacing: 1px; margin-left: 5px; text-transform: uppercase; }
+.input-label { font-size: 10px; color: rgba(0, 229, 255, 0.6); letter-spacing: 1px; margin-left: 4px; text-transform: uppercase; }
 
 input, select {
-    width: 100%; padding: 26px; margin: 5px 0 0 0;
+    width: 100%; padding: 21px; margin: 4px 0 0 0;
     background: rgba(0, 20, 25, 0.6);
     color: var(--primary); border: 1px solid rgba(0, 229, 255, 0.2);
-    font-family: 'Courier New', monospace; font-weight: bold; font-size: 20px;
+    font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px;
     border-radius: 4px; transition: all 0.3s ease;
 }
 input:focus, select:focus {
@@ -174,12 +174,12 @@ input:focus, select:focus {
 }
 
 button {
-    width: 100%; padding: 26px; margin-top: 15px;
+    width: 100%; padding: 21px; margin-top: 12px;
     background: transparent; color: var(--primary);
     border: 1px solid var(--primary);
     font-weight: bold; cursor: pointer;
-    font-family: 'Courier New', monospace; font-size: 20px;
-    letter-spacing: 5.7px; text-transform: uppercase;
+    font-family: 'Courier New', monospace; font-size: 16px;
+    letter-spacing: 4.5px; text-transform: uppercase;
     transition: all 0.3s ease; position: relative;
     overflow: hidden;
     transform: translateZ(35px); /* Nút bấm nổi rõ */
@@ -194,22 +194,22 @@ button:active { transform: translateZ(20px) scale(0.98); } /* Hiệu ứng lún 
 button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; background: none; box-shadow: none; text-shadow: none;}
 
 .binary-scanner {
-    width: 100%; height: 50px;
+    width: 100%; height: 40px;
     background: rgba(0, 10, 12, 0.8);
     border: 1px solid rgba(0, 229, 255, 0.15);
-    margin: 15px 0; display: flex; justify-content: center; align-items: center;
+    margin: 12px 0; display: flex; justify-content: center; align-items: center;
     transform: translateZ(20px);
 }
 .binary-stream {
-    font-size: 16px; color: var(--primary);
-    letter-spacing: 2px; text-shadow: 0 0 5px var(--primary-glow);
+    font-size: 13px; color: var(--primary);
+    letter-spacing: 1.6px; text-shadow: 0 0 5px var(--primary-glow);
     font-weight: bold;
 }
 
 /* ================== THANH TIẾN TRÌNH ĐIỆN ẢNH ================== */
 .progress {
-    height: 6px; background: rgba(0, 20, 25, 0.8); margin-top: 15px;
-    border-radius: 3px; overflow: hidden;
+    height: 5px; background: rgba(0, 20, 25, 0.8); margin-top: 12px;
+    border-radius: 2px; overflow: hidden;
     border: 1px solid rgba(0, 229, 255, 0.1);
     transform: translateZ(15px);
 }
@@ -237,9 +237,9 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
 }
 
 .log {
-    height: 172px; overflow: auto;
-    background: rgba(0, 5, 6, 0.8); margin-top: 15px; padding: 17px;
-    font-size: 14px; text-align: left;
+    height: 138px; overflow: auto;
+    background: rgba(0, 5, 6, 0.8); margin-top: 12px; padding: 13px;
+    font-size: 11px; text-align: left;
     border: 1px solid rgba(0, 229, 255, 0.1); color: #88c9b2;
     transform: translateZ(10px);
 }
@@ -249,8 +249,8 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
     position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(220, 20, 20, 0.95); color: #fff;
-    padding: 30px 54px; font-weight: 900; font-size: 21.6px;
-    letter-spacing: 4px; z-index: 100;
+    padding: 24px 43px; font-weight: 900; font-size: 17px;
+    letter-spacing: 3px; z-index: 100;
     border: 2px solid #fff; box-shadow: 0 0 40px var(--danger);
     display: none; pointer-events: none;
     animation: pulseDanger 0.4s infinite alternate cubic-bezier(0.4, 0, 0.6, 1);
@@ -267,11 +267,11 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
 }
 .alert-box {
     background: #010a0c; border: 1px solid var(--danger);
-    padding: 30px; text-align: center; max-width: 380px; width: 85%;
+    padding: 24px; text-align: center; max-width: 304px; width: 85%;
     box-shadow: 0 0 30px rgba(255, 42, 42, 0.2);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
 }
-#alert-message { font-size: 13px; color: #ffcccc; line-height: 1.6; margin-bottom: 25px; }
+#alert-message { font-size: 10px; color: #ffcccc; line-height: 1.6; margin-bottom: 20px; }
 
 /* RUNG LẮC MÀN HÌNH */
 .shake-effect {
@@ -289,57 +289,57 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
     flex-direction: column;
 }
 
-.terminal-delete-box { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 672px; }
+.terminal-delete-box { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 538px; }
 
 .deleting-spinner {
-    width: 134px; height: 134px;
+    width: 107px; height: 107px;
     border: 3px solid rgba(255, 42, 42, 0.1); border-top: 3px solid var(--danger); border-radius: 50%;
-    animation: spinClockwise 1s linear infinite; margin-bottom: 34px;
+    animation: spinClockwise 1s linear infinite; margin-bottom: 27px;
     box-shadow: 0 0 20px rgba(255, 42, 42, 0.2);
 }
 
 .deleting-text {
-    color: var(--danger); font-size: 23.5px; font-weight: bold; letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(255, 42, 42, 0.4); margin-bottom: 25px;
+    color: var(--danger); font-size: 19px; font-weight: bold; letter-spacing: 1.6px;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.4); margin-bottom: 20px;
 }
 
 .terminal-output {
-    width: 100%; height: 185px; background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 42, 42, 0.3); padding: 22px;
-    overflow: hidden; font-size: 18.5px; color: #ff8888; text-align: left; line-height: 1.5;
+    width: 100%; height: 148px; background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 42, 42, 0.3); padding: 18px;
+    overflow: hidden; font-size: 15px; color: #ff8888; text-align: left; line-height: 1.5;
 }
 
 /* MỤC CHUYỂN ĐỔI CỔNG QUỐC TẾ */
 .portal-switch-box {
-    display: none; flex-direction: column; align-items: center; width: 100%; max-width: 801px;
-    background: rgba(0, 10, 15, 0.9); border: 1px solid #00ff88; padding: 55px;
+    display: none; flex-direction: column; align-items: center; width: 100%; max-width: 641px;
+    background: rgba(0, 10, 15, 0.9); border: 1px solid #00ff88; padding: 44px;
     box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
     animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .portal-title {
-    color: #00ff88; font-size: 29px; font-weight: bold; letter-spacing: 7.2px;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); margin-bottom: 50px; text-transform: uppercase;
+    color: #00ff88; font-size: 23px; font-weight: bold; letter-spacing: 5.8px;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); margin-bottom: 40px; text-transform: uppercase;
 }
 
 .portal-status-line {
-    width: 100%; display: flex; justify-content: space-between; font-size: 21.8px;
-    color: #88c9b2; margin-bottom: 25px; font-family: monospace;
+    width: 100%; display: flex; justify-content: space-between; font-size: 17px;
+    color: #88c9b2; margin-bottom: 20px; font-family: monospace;
 }
 
 .portal-actions {
-    display: flex; flex-direction: column; gap: 21px; width: 100%; margin-top: 21px;
+    display: flex; flex-direction: column; gap: 17px; width: 100%; margin-top: 17px;
 }
 .portal-actions-row {
-    display: flex; gap: 21px; width: 100%;
+    display: flex; gap: 17px; width: 100%;
 }
 
 .btn-loading {
-    display: inline-block; width: 20px; height: 20px;
+    display: inline-block; width: 16px; height: 16px;
     border: 2px solid rgba(0, 255, 136, 0.3); border-top: 2px solid #00ff88;
     border-radius: 50%; animation: spinClockwise 0.6s linear infinite;
-    vertical-align: middle; margin-right: 11px;
+    vertical-align: middle; margin-right: 9px;
 }
 
 @keyframes scaleIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -923,7 +923,7 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
 
 <div class="custom-alert" id="custom-alert">
     <div class="alert-box">
-        <div style="font-size: 11px; color: var(--danger); letter-spacing: 3px; margin-bottom: 10px; font-weight: bold;">[ HỆ THỐNG CẢNH BÁO ]</div>
+        <div style="font-size: 8px; color: var(--danger); letter-spacing: 2px; margin-bottom: 6px; font-weight: bold;">[ HỆ THỐNG CẢNH BÁO ]</div>
         <p id="alert-message">Nội dung thông báo ở đây.</p>
         <button onclick="closeAlert()" style="border-color: var(--danger); color: var(--danger);">ĐÃ HIỂU</button>
     </div>
@@ -950,15 +950,15 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
             <span>Giao thức đề xuất:</span>
             <span style="color: #00e5ff;">SSL_V3 (QUỐC TẾ)</span>
         </div>
-        <div style="font-size: 15px; color: #ffcccc; margin: 21px 0; text-align: center; line-height: 1.5;">
+        <div style="font-size: 12px; color: #ffcccc; margin: 12px 0; text-align: center; line-height: 1.5;">
             Đã xóa mã ẩn thành công. Bấm nút bên dưới để vượt tường lửa và tiến hành bẻ khóa SSL chuyển thẳng tới cổng Quốc Tế.
         </div>
         <div class="portal-actions">
             <div class="portal-actions-row">
-                <button id="btn-agree" onclick="triggerRedirect()" style="border-color: #00ff88; color: #00ff88; margin: 0; padding: 20px; font-size: 18px; letter-spacing: 3px;">ĐỒNG Ý CHUYỂN</button>
-                <button onclick="window.open('https://t.me/rjnzcoder', '_blank')" style="border-color: #00e5ff; color: #00e5ff; margin: 0; padding: 20px; font-size: 18px; letter-spacing: 3px;">LIÊN HỆ ADMIN</button>
+                <button id="btn-agree" onclick="triggerRedirect()" style="border-color: #00ff88; color: #00ff88; margin: 0; padding: 11px; font-size: 13px; letter-spacing: 1.6px;">ĐỒNG Ý CHUYỂN</button>
+                <button onclick="window.open('https://t.me/rjnzcoder', '_blank')" style="border-color: #00e5ff; color: #00e5ff; margin: 0; padding: 11px; font-size: 13px; letter-spacing: 1.6px;">LIÊN HỆ ADMIN</button>
             </div>
-            <button onclick="closePop()" style="border-color: #444; color: #888; margin: 0; padding: 20px; font-size: 18px; letter-spacing: 3px;">HỦY LỆNH</button>
+            <button onclick="closePop()" style="border-color: #444; color: #888; margin: 0; padding: 11px; font-size: 13px; letter-spacing: 1.6px;">HỦY LỆNH</button>
         </div>
     </div>
 </div>
@@ -1028,7 +1028,7 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
             </select>
         </div>
 
-        <div class="input-group" id="other-game-box" style="display: none; margin-top: -10px;">
+        <div class="input-group" id="other-game-box" style="display: none; margin-top: -8px;">
             <div class="input-label" style="color: var(--warning);">Nhập tên trang web của bạn:</div>
             <input id="other-game-input" placeholder="Ví dụ: 8kbet, 123b, kubet..." onkeydown="playTypeSound()">
         </div>
