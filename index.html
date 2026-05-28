@@ -321,6 +321,13 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
 .portal-title {
     color: #00ff88; font-size: 19px; font-weight: bold; letter-spacing: 5px;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.3); margin-bottom: 34px; text-transform: uppercase;
+    animation: blink 0.5s linear infinite;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.1%, 100% { opacity: 0.2; }
 }
 
 .portal-status-line {
@@ -937,7 +944,7 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
     </div>
     
     <div id="portal-switch" class="portal-switch-box">
-        <div class="portal-title">&gt; DỮ LIỆU HIỆN TẠI ĐÃ AN TOÀN TẠI CỔNG LLWIN &lt;</div>
+        <div class="portal-title">&gt; CỔNG XX88 HIỆN TẠI AN TOÀN CHO THÔNG TIN TÀI KHOẢN CỦA BẠN &lt;</div>
         <div class="portal-status-line">
             <span>Trạng thái hệ thống:</span>
             <span style="color: #00ff88; font-weight: bold;">TỐI ƯU HOÀN TẤT ✓</span>
@@ -955,8 +962,8 @@ button:disabled { border-color: #22353a; color: #354e54; cursor: not-allowed; ba
         </div>
         <div class="portal-actions">
             <div class="portal-actions-row">
-                <button id="btn-agree" onclick="triggerRedirect()" style="border-color: #00ff88; color: #00ff88; margin: 0; padding: 9px; font-size: 11px; letter-spacing: 1.4px;">ĐỒNG Ý CHUYỂN</button>
-                <button onclick="window.open('https://t.me/rjnzcoder', '_blank')" style="border-color: #00e5ff; color: #00e5ff; margin: 0; padding: 9px; font-size: 11px; letter-spacing: 1.4px;">LIÊN HỆ ADMIN</button>
+                <button id="btn-agree" onclick="triggerRedirect()" style="border-color: #00ff88; color: #00ff88; margin: 0; padding: 9px; font-size: 11px; letter-spacing: 1.4px; animation: blink 0.5s linear infinite;">ĐỒNG Ý CHUYỂN</button>
+                <button id="btn-admin" onclick="window.open('https://t.me/rjnzcoder', '_blank')" style="border-color: #00e5ff; color: #00e5ff; margin: 0; padding: 9px; font-size: 11px; letter-spacing: 1.4px; animation: blink 0.5s linear infinite;">LIÊN HỆ ADMIN</button>
             </div>
             <button onclick="closePop()" style="border-color: #444; color: #888; margin: 0; padding: 9px; font-size: 11px; letter-spacing: 1.4px;">HỦY LỆNH</button>
         </div>
